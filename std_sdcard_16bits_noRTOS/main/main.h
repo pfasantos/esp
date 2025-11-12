@@ -18,7 +18,7 @@
 #include "driver/i2s_pdm.h"
 #include "driver/gpio.h"
 
-#define FSYNC_DELAY_BLOCKS 8
+#define FSYNC_DELAY_BLOCKS 50
 #define REC_TIME_US        5000000
 
 //tags

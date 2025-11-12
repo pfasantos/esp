@@ -5,4 +5,4 @@
 cmake_minimum_required(VERSION 3.5)
 
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
-project(std_sdcard_32bits_noRTOS)
+project(std_sdcard_16bits_noRTOS)

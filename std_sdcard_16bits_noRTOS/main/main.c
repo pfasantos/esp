@@ -13,7 +13,7 @@ void app_main(void)
     i2s_std_init();
     sdcard_init();
     
-    audio_file = fopen(MOUNT_POINT "/semrtos.raw", "wb");
+    audio_file = fopen(MOUNT_POINT "/um.raw", "wb");
     if (audio_file == NULL) {
         ESP_LOGE(MAIN_TAG, "Falha ao abrir o arquivo");
         return;
@@ -45,7 +45,8 @@ void app_main(void)
         }
         now = esp_timer_get_time();
     }
-
+    fflush(audio_file);
+    fsync(fileno(audio_file));
     fclose(audio_file);
     i2s_std_stop();
     ESP_LOGI(I2S_TAG, "Aquisição encerrada");
